@@ -20,3 +20,22 @@ We will take the following steps to implement EfficientDet D0 on our custom data
 ```
   !git clone --depth 1 https://github.com/tensorflow/models
   ```
+
+## Install the Object Detection API
+```
+%%bash
+cd models/research/
+protoc object_detection/protos/*.proto --python_out=.
+cp object_detection/packages/tf2/setup.py .
+python -m pip install .
+```
+``
+## run model builder test
+!python model_builder_tf2_test.py
+``
+
+
+
+## Reslut
+![download](https://user-images.githubusercontent.com/57318222/115399440-d8287b80-a205-11eb-8719-35d2db66ee53.png)
+
